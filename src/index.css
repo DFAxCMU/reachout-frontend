@@ -4,10 +4,10 @@ body, p, h1, h2, h3, h4, h5 {
   font-family: sans-serif;
 }
 
-#topnav {
+/*#topnav {
   width: 100%;
   background-color: lightblue;
-}
+}*/
 
 #sidebar {
   width: 40%;

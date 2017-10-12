@@ -5,6 +5,7 @@ import RequestsContainer from '../containers/requestsContainer';
 
 class Profile extends Component {
     render() {
+        console.log("PROFILE PROPS", this.props)
         return (
             <div>
                 <TopNav />

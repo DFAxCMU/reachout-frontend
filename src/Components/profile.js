@@ -1,23 +1,20 @@
 import React, { Component } from 'react';
 
-import TopNav from './topnav.js';
+import TopNav from './topnav';
+import RequestsContainer from '../containers/requestsContainer';
 
-export default class Profile extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { 
-            name: "John Doe", 
-        };
-    }
+class Profile extends Component {
     render() {
-        var sidebarIsOpen = false;
         return (
             <div>
                 <TopNav />
                 <div>user header will go here</div>
                 <hr/>
                 <div>user info will go here</div>
+                <RequestsContainer />
             </div>
         );
     }
 }
+
+export default Profile;

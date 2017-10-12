@@ -8,7 +8,11 @@ import { Button,
          Nav
 } from 'react-bootstrap';
 
-export default class TopNav extends Component {
+import { store } from '../index.js';
+
+import { toggleSidebar } from '../actions';
+
+class TopNav extends Component {
     render() {
         return (
             <Navbar >
@@ -19,19 +23,26 @@ export default class TopNav extends Component {
                         </Navbar.Brand>
                     </Navbar.Header>
                 </Col>
-                <Col xs={5}>
+                <Col xs={3}>
                     <Nav pullRight>
-                        <Navbar.Form pullRight>
+                        {/* <Navbar.Form pullRight>
                             <InputGroup>
                                 <FormControl type="text" placeholder="Search" />
                                 <InputGroup.Button>
                                     <Button><Glyphicon glyph="search"/></Button>
                                 </InputGroup.Button>
                             </InputGroup>
-                        </Navbar.Form>
+                        </Navbar.Form> */}
                     </Nav>
-              </Col>
+                </Col>
+                <Col xs={2}>
+                    <Button onClick={() => store.dispatch(toggleSidebar())}>
+                        <Glyphicon glyph="menu-hamburger"/>
+                    </Button>
+                </Col>
             </Navbar>
         );
     }
 }
+
+export default TopNav
